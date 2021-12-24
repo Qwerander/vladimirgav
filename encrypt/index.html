@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Mirrored from themelooks.net/demo/vpnet/html/preview/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jul 2018 07:24:25 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CryptoJS -->
+    <script src="cryptojs/src/core.js"></script>
+    <script src="cryptojs/src/lib-typedarrays.js"></script>
+    <script src="cryptojs/src/x64-core.js"></script>
+    <script src="cryptojs/src/enc-utf16.js"></script>
+    <script src="cryptojs/src/enc-base64.js"></script>
+    <script src="cryptojs/src/enc-base64url.js"></script>
+    <script src="cryptojs/src/md5.js"></script>
+    <script src="cryptojs/src/sha1.js"></script>
+    <script src="cryptojs/src/sha256.js"></script>
+    <script src="cryptojs/src/sha224.js"></script>
+    <script src="cryptojs/src/sha512.js"></script>
+    <script src="cryptojs/src/sha384.js"></script>
+    <script src="cryptojs/src/sha3.js"></script>
+    <script src="cryptojs/src/ripemd160.js"></script>
+    <script src="cryptojs/src/hmac.js"></script>
+    <script src="cryptojs/src/pbkdf2.js"></script>
+    <script src="cryptojs/src/evpkdf.js"></script>
+    <script src="cryptojs/src/cipher-core.js"></script>
+    <script src="cryptojs/src/mode-cfb.js"></script>
+    <script src="cryptojs/src/mode-ctr.js"></script>
+    <script src="cryptojs/src/mode-ofb.js"></script>
+    <script src="cryptojs/src/mode-ecb.js"></script>
+    <script src="cryptojs/src/pad-ansix923.js"></script>
+    <script src="cryptojs/src/pad-iso10126.js"></script>
+    <script src="cryptojs/src/pad-zeropadding.js"></script>
+    <script src="cryptojs/src/pad-iso97971.js"></script>
+    <script src="cryptojs/src/pad-nopadding.js"></script>
+    <script src="cryptojs/src/rc4.js"></script>
+    <script src="cryptojs/src/rabbit.js"></script>
+    <script src="cryptojs/src/rabbit-legacy.js"></script>
+    <script src="cryptojs/src/aes.js"></script>
+    <script src="cryptojs/src/tripledes.js"></script>
+</head>
+<body>
+<div class="pageEncrypt">
+    <h1>Encrypt and Decrypt text with key Online</h1>
+    <h2>Algorithm: AES, RC4, Triple DES (3DES), Rabbit</h2>
+    <form class="formEncrypt" method="post">
+        <div><label><b>Text:</b> <textarea name="text"></textarea></label></div>
+        <div><label><b>Key:</b> <input type="text" name="key" autocomplete="off"></label></div>
+        <div>
+            <p><b>Algorithm:</b>
+                <label><input type="radio" name="algorithm" value="AES" checked>AES</label>
+                <label><input type="radio" name="algorithm" value="RC4">RC4</label>
+                <label><input type="radio" name="algorithm" value="TripleDES">Triple DES (3DES)</label>
+                <label><input type="radio" name="algorithm" value="Rabbit">Rabbit</label>
+            </p>
+        </div>
+        <div>
+            <p><b>Action type:</b>
+                <label><input type="radio" name="action" value="1" checked>Encrypt</label>
+                <label><input type="radio" name="action" value="2">Decrypt</label>
+            </p>
+        </div>
+        <div>
+            <label><input type="checkbox" name="format" value="1"> Base64</label>
+        </div>
+        <div>
+            <button class="execute" type="submit">execute</button>
+        </div>
+        <div>
+            <p><b>Result</b></p>
+            <textarea class="resultText" disabled></textarea>
+        </div>
+    </form>
+    <script type="application/javascript">
+
+        document.addEventListener('submit', function OnClick(event) {
+            var $this = event.target;
+
+            var ActionNameClass = 'formEncrypt';
+            if ($this.classList.contains(ActionNameClass)) {
+                event.preventDefault();
+
+                var resultText = document.querySelector('.resultText');
+                var resultStr = '';
+                resultText.value = '';
+
+                var formData = new FormData($this);
+                var text = formData.get("text");
+                var key = formData.get("key");
+                var algorithm = formData.get("algorithm");
+                var action = formData.get("action");
+                var format = formData.get("format");
+
+                // Encrypt
+                if (action == 1) {
+                    if (algorithm == 'AES') {
+                        var cipherText = CryptoJS.AES.encrypt(text, key).toString();
+                    }
+                    if (algorithm == 'RC4') {
+                        var cipherText = CryptoJS.RC4.encrypt(text, key).toString();
+                    }
+                    if (algorithm == 'TripleDES') {
+                        var cipherText = CryptoJS.TripleDES.encrypt(text, key).toString();
+                    }
+                    if (algorithm == 'Rabbit') {
+                        var cipherText = CryptoJS.Rabbit.encrypt(text, key).toString();
+                    }
+
+                    if (format == 1) {
+                        resultStr = btoa(cipherText);
+                    } else {
+                        resultStr = cipherText;
+                    }
+                }
+
+                // Decrypt
+                if (action == 2) {
+                    if (format == 1) {
+                        text = atob(text);
+                    }
+
+                    if (algorithm == 'AES') {
+                        var bytes = CryptoJS.AES.decrypt(text, key);
+                    }
+                    if (algorithm == 'RC4') {
+                        var bytes = CryptoJS.RC4.decrypt(text, key);
+                    }
+                    if (algorithm == 'TripleDES') {
+                        var bytes = CryptoJS.TripleDES.decrypt(text, key);
+                    }
+                    if (algorithm == 'Rabbit') {
+                        var bytes = CryptoJS.Rabbit.decrypt(text, key);
+                    }
+
+                    var originalText = bytes.toString(CryptoJS.enc.Utf8);
+                    resultStr = originalText;
+                }
+
+                resultText.value = resultStr;
+
+                return false;
+
+            }
+
+        });
+
+    </script>
+    <style>
+        .pageEncrypt {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .formEncrypt textarea {
+            width: 100%;
+            min-height: 100px;
+            border: 1px solid #cccccc;
+        }
+
+        .formEncrypt input[name=key] {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #cccccc;
+        }
+        .execute {
+            text-transform: uppercase;
+            background: #4c8fdf;
+            color: #fff;
+            margin-top: 20px;
+            height: 45px;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .execute:hover {
+            opacity: 0.8;
+        }
+    </style>
+</div>
+</body>
+</html>
