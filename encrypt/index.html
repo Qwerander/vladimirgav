@@ -45,8 +45,11 @@
 <div class="pageEncrypt">
     <h1>Encrypt and Decrypt text with key Online</h1>
     <h2>Algorithm: AES, RC4, Triple DES (3DES), Rabbit</h2>
-    <form class="formEncrypt" method="post">
-        <div><label><b>Text:</b> <textarea name="text"></textarea></label></div>
+    <form class="formEncrypt" method="post" enctype="multipart/form-data">
+        <div>
+            <p><b>Text or File (.txt) <input type="file" name="fileText" class="fileText" accept="text/plain"></b></p>
+            <label><textarea name="text"></textarea></label>
+        </div>
         <div><label><b>Key:</b> <input type="text" name="key" autocomplete="off"></label></div>
         <div>
             <p><b>Algorithm:</b>
@@ -67,14 +70,15 @@
         </div>
         <div>
             <button class="execute" type="submit">execute</button>
+            <a href="#" class="ClearForm" onclick="window.location.reload(true);">Clear form</a>
         </div>
         <div>
-            <p><b>Result</b> <a class="copy" href="#">Copy</a></p>
+            <p><b>Result</b> <a class="saveFile" href="#">Save file</a> <a class="copy" href="#">Copy</a></p>
             <textarea class="resultText" disabled></textarea>
         </div>
     </form>
     <script type="application/javascript">
-
+        var FileName = 'ResultText.txt';
 
         function copyToClipboard(str) {
             var el = document.createElement('textarea');
@@ -97,6 +101,45 @@
 
                 var resultText = document.querySelector('.resultText');
                 copyToClipboard(resultText.value);
+
+                return false;
+
+            }
+
+            var ActionNameClass = 'saveFile';
+            if ($this.classList.contains(ActionNameClass)) {
+                event.preventDefault();
+
+                var resultText = document.querySelector('.resultText');
+
+                var hiddenElement = document.createElement('a');
+                hiddenElement.href = 'data:attachment/text,' + encodeURI(resultText.value);
+                hiddenElement.target = '_blank';
+                hiddenElement.download = FileName;
+                hiddenElement.click();
+
+                return false;
+
+            }
+
+        });
+
+        document.addEventListener('change', function OnClick(event) {
+            var $this = event.target;
+
+            var ActionNameClass = 'fileText';
+            if ($this.classList.contains(ActionNameClass)) {
+                event.preventDefault();
+
+                var fileText = document.querySelector('.formEncrypt [name="fileText"]');
+                FileName = fileText.value.split('/').pop().split('\\').pop();
+                var text = document.querySelector('.formEncrypt [name="text"]');
+                var reader = new FileReader();
+                reader.onload = function(){
+                    text.value = reader.result;
+                };
+                reader.readAsText(fileText.files[0]);
+                fileText.value = '';
 
                 return false;
 
@@ -209,26 +252,30 @@
             height: 30px;
             border: 1px solid #cccccc;
         }
-        .execute {
+        .execute,.ClearForm {
             text-transform: uppercase;
             background: #4c8fdf;
             color: #fff;
             margin-top: 20px;
-            height: 45px;
             font-size: 16px;
-            padding: 10px 20px;
+            padding: 14px 20px;
             border: none;
             cursor: pointer;
         }
         .execute:hover {
             opacity: 0.8;
         }
-        .copy {
+        .ClearForm {
+            background: #9b9c9f;
+            text-decoration: none;
+        }
+        .copy, .saveFile {
             text-align: right;
             float: right;
             color: #4c8fdf;
             text-transform: uppercase;
             text-decoration: none;
+            margin-left: 20px;
         }
     </style>
 </div>
