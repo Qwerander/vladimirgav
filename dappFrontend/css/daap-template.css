@@ -1,0 +1,398 @@
+/**
+ * VladimirGav
+ * GitHub Website: https://vladimirgav.github.io/
+ * GitHub: https://github.com/VladimirGav
+ * Copyright (c)
+ */
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    outline: none;
+}
+
+.pageAccount {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.LoginWeb3Button {
+    display: table;
+    text-transform: uppercase;
+    background: #4c8fdf;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.dappContent {
+    background: #c6def9;
+}
+
+.dappHeadBlock {
+    display: table;
+    min-height: 50px;
+    background: #ffffff;
+    padding: 5px 2%;
+    width: 96%;
+}
+
+/*.dappBlock[data-dapp-block=DappWalletBlock] {
+    width: 185px;
+    float: right;
+}*/
+
+/*.daapConnectWalletButton {
+    text-transform: uppercase;
+    background: #4c8fdf;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: table;
+}*/
+
+.dappBlock[data-dapp-block=DappAccountDataBlock] {
+    width: 185px;
+    float: right;
+}
+
+.dappBtn {
+    background: #4c8fdf;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: table;
+    margin: 5px;
+    float: right;
+    border-radius: 20px;
+}
+
+.dappBodyBlock {
+    width: 100%;
+    min-height: 300px;
+    background-color: #ecf5ff;
+    display: table;
+}
+
+.dappBlock[data-dapp-block=DappWalletBlock] {
+    float: right;
+}
+
+/*.dappBlock[data-dapp-block=DappWalletBlock] .daapConnectWalletInfo,
+.dappBlock[data-dapp-block=DappSelectNetworkBlock] .currentNetworkBlock {
+    display: table;
+    background: #eff4f5;
+    padding: 12px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #280d5f;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}*/
+
+.dappBtn.BtnInfo {
+    color: #fff;
+    background: #4c8fdf;
+}
+
+.MultiMenuButton,
+.dappBtn {
+    display: table;
+    background: #eff4f5;
+    padding: 0px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #280d5f;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    height: 32px;
+    text-indent: 24px;
+    line-height: 32px;
+}
+
+.MultiMenuButton img,
+.dappBtn img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 100%;
+}
+
+.MultiMenu {
+    position: relative;
+    z-index: 1;
+}
+
+.MultiMenu ul {
+    width: 275px;
+    float: right;
+    /* display: table; */
+    background: #ffffff;
+    border: 1px solid #9fd0df;
+    margin: 0px;
+    border-radius: 10px;
+    position: absolute;
+    top: 45px;
+    right: 5px;
+    padding: 5px 5px;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.MultiMenu li {
+    list-style: none;
+    position: relative;
+}
+
+.MultiMenu a {
+    color: #280d5f;
+    text-decoration: none;
+    font-size: 18px;
+    display: table;
+    width: 100%;
+    min-height: 34px;
+    line-height: 34px;
+    text-indent: 40px;
+    border-bottom: 1px solid #22a9d1;
+    padding: 5px 0px;
+}
+
+.MultiMenu li:last-child a {
+    border-bottom: 0px solid #22a9d1;
+}
+
+.MultiMenu img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    border-radius: 100%;
+}
+
+.MultiMenu a:hover {
+    background-color: #eff4f5;
+}
+
+
+.dappBlock[data-dapp-block=DappWalletBlock],
+.dappBlock[data-dapp-block=DappSelectNetworkBlock],
+.dappBlock[data-dapp-block=DappLanguageBlock] {
+    float: right;
+    display: table;
+}
+
+.dappBlock[data-dapp-block=DappSelectNetworkBlock] .currentNetworkBlock {
+
+}
+
+@media (max-width: 800px) {
+    .dappBlock[data-dapp-block=DappWalletBlock],
+    .dappBlock[data-dapp-block=DappSelectNetworkBlock],
+    .dappBlock[data-dapp-block=DappLanguageBlock] {
+        float: none;
+        display: block;
+        clear: both;
+    }
+    .MultiMenuButton,
+    .dappBtn {
+        display: block;
+        width: 90%;
+    }
+}
+
+.dappBlock[data-dapp-block=DappLogoBlock] {
+    font-size: 24px;
+    font-weight: bold;
+    float: left;
+    line-height: 42px;
+}
+.dappBlock[data-dapp-block=DappFooterBlock] {
+    background: #c6def9;
+}
+.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu {
+    padding: 10px 1%;
+}
+.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li {
+    padding-bottom: 5px;
+    float: left;
+    margin: 5px 10px;
+}
+.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li a {
+    text-decoration: none;
+    color: #000;
+}
+.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li a:hover {
+    text-decoration: underline;
+}
+
+.dt { display: table; }
+.db { display: block; }
+.dn { display: none; }
+
+/* ml */
+.ml1 { margin-left: 10px; }
+.ml2 { margin-left: 20px; }
+.ml3 { margin-left: 30px; }
+.ml4 { margin-left: 40px; }
+.ml5 { margin-left: 50px; }
+
+/* mr */
+.mr1 { margin-right: 10px; }
+.mr2 { margin-right: 20px; }
+.mr3 { margin-right: 30px; }
+.mr4 { margin-right: 40px; }
+.mr5 { margin-right: 50px; }
+
+/* mt */
+.mt1 { margin-top: 10px; }
+.mt2 { margin-top: 20px; }
+.mt3 { margin-top: 30px; }
+.mt4 { margin-top: 40px; }
+.mt5 { margin-top: 50px; }
+
+/* mb */
+.mb1 { margin-bottom: 10px; }
+.mb2 { margin-bottom: 20px; }
+.mb3 { margin-bottom: 30px; }
+.mb4 { margin-bottom: 30px; }
+.mb5 { margin-bottom: 30px; }
+
+/* page MultiTransfers */
+
+.dappBodyBlock .contentBlock {
+    display: table;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    background-color: #ffffff;
+    /* border: 1px solid #9fd0df; */
+    border-radius: 24px;
+    padding: 24px 1%;
+    width: 96%;
+}
+
+.dappBodyBlock .contentBlock h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.dappBodyBlock .contentBlock p {
+    font-size: 16px;
+}
+
+.dappBodyBlock .contentBlock .daap-simple-form {
+
+}
+.dappBodyBlock .contentBlock .daap-simple-form label {
+    display: block;
+}
+.dappBodyBlock .contentBlock .daap-simple-form input {
+    width: 98%;
+    min-width: 98%;
+    max-width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 35px;
+    border: 1px solid #c1c1c1;
+    background-color: #eeeaf4;
+    border-radius: 10px;
+}
+.dappBodyBlock .contentBlock .daap-simple-form input[type=text] {
+
+}
+.dappBodyBlock .contentBlock .daap-simple-form textarea {
+    width: 98%;
+    min-width: 98%;
+    max-width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    min-height: 470px;
+    border: 1px solid #c1c1c1;
+    background-color: #eeeaf4;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 7px;
+}
+
+@media (max-width: 800px) {
+    .dappBodyBlock .contentBlock .daap-simple-form textarea {
+        min-height: 200px;
+    }
+}
+
+.dappBodyBlock .contentBlock .daap-simple-form input:focus {
+    border-color: #c1c1c1;
+}
+
+.dappBodyBlock .contentBlock .daap-simple-form .formBtn {
+    display: block;
+    /* padding: 0px 15px; */
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #280d5f;
+    float: right;
+    /* margin: 5px; */
+    cursor: pointer;
+    text-decoration: none;
+    /* position: relative; */
+    height: 45px;
+    /* text-indent: 45px; */
+    line-height: 45px;
+    background-color: #4c8fdf;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.dappBodyBlock .contentBlock .daap-simple-form .formBtn:hover {
+    opacity: 0.9;
+}
+
+.dappBodyBlock .contentBlock .daap-simple-form .daapMessage {
+    background: #ebecff;
+    padding: 15px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.dappBodyBlock .contentBlock .daap-simple-form .daapMessageError {
+    background: #ffe2e2;
+}
+
+.dappBodyBlock .contentBlock .daap-simple-form .ButtonsBlock {
+    display: table;
+    width: 100%;
+}
