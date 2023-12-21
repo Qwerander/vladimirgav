@@ -1,6 +1,12 @@
-# phpstorm project files
 .idea
 multi-transfers.html
 dappFrontend/js/sWeb3App.js
 dappFrontend/js/sDapp.js
+
+dappFrontend/js/mStakingPool.js
+dappFrontend/js/mMultiStakingPools.js
+
 dappFrontend/js/page-multi-transfers.js
+dappFrontend/js/page-create-staking.js
+dappFrontend/js/page-staking.js
+dappFrontend/js/page-staking-details.js

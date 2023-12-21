@@ -39,7 +39,7 @@ h2 {
 }
 
 .dappContent {
-    background: #c6def9;
+    background-color: #ecf5ff;
 }
 
 .dappHeadBlock {
@@ -88,13 +88,38 @@ h2 {
 
 .dappBodyBlock {
     width: 100%;
-    min-height: 300px;
+    min-height: calc(100vh - 110px);
     background-color: #ecf5ff;
     display: table;
 }
 
-.dappBlock[data-dapp-block=DappWalletBlock] {
-    float: right;
+@media (max-width: 800px) {
+    .dappBodyBlock {
+        min-height: calc(100vh - 228px);
+    }
+}
+
+.dappBlock[data-dapp-block=DappPagesBlock] {
+    float: left;
+    display: table;
+}
+.dappBlock[data-dapp-block=DappPagesBlock] .toolsButtons a {
+    float: left;
+}
+.dappBlock[data-dapp-block=DappPagesBlock] .toolsButtons img {
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width: 800px) {
+    .dappBlock[data-dapp-block=DappPagesBlock] {
+        float: none;
+        display: block;
+    }
+    /*.dappBlock[data-dapp-block=DappPagesBlock] a {
+        float: none;
+        display: block;
+    }*/
 }
 
 /*.dappBlock[data-dapp-block=DappWalletBlock] .daapConnectWalletInfo,
@@ -169,6 +194,10 @@ h2 {
     overflow-y: auto;
 }
 
+.MultiMenu.MultiMenuLeft ul {
+    left: 5px;
+}
+
 .MultiMenu li {
     list-style: none;
     position: relative;
@@ -204,6 +233,26 @@ h2 {
     background-color: #eff4f5;
 }
 
+@media (max-width: 800px) {
+    .MultiMenu {
+
+    }
+    .MultiMenu ul {
+        width: 98%;
+        right: 0px;
+        padding: 5px 1%;
+    }
+    .MultiMenu.MultiMenuLeft ul {
+        left: 0px;
+    }
+    .MultiMenu li {
+
+    }
+    .MultiMenu a {
+
+    }
+}
+
 
 .dappBlock[data-dapp-block=DappWalletBlock],
 .dappBlock[data-dapp-block=DappSelectNetworkBlock],
@@ -227,7 +276,9 @@ h2 {
     .MultiMenuButton,
     .dappBtn {
         display: block;
-        width: 90%;
+        width: calc(100% - 35px);
+        margin-right: 0px;
+        margin-left: 0px;
     }
 }
 
@@ -236,24 +287,6 @@ h2 {
     font-weight: bold;
     float: left;
     line-height: 42px;
-}
-.dappBlock[data-dapp-block=DappFooterBlock] {
-    background: #c6def9;
-}
-.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu {
-    padding: 10px 1%;
-}
-.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li {
-    padding-bottom: 5px;
-    float: left;
-    margin: 5px 10px;
-}
-.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li a {
-    text-decoration: none;
-    color: #000;
-}
-.dappBlock[data-dapp-block=DappFooterBlock] .footer-menu li a:hover {
-    text-decoration: underline;
 }
 
 .dt { display: table; }
@@ -288,7 +321,31 @@ h2 {
 .mb4 { margin-bottom: 30px; }
 .mb5 { margin-bottom: 30px; }
 
+/* tc */
+.tc { text-align: center; }
+.tl { text-align: left; }
+.tr { text-align: right; }
+
+.fwb { font-weight: bold; }
+
+.ttu { text-transform: uppercase; }
+
+.h1 { font-size: 24px; }
+.h2 { font-size: 22px; }
+.h3 { font-size: 20px; }
+.h4 { font-size: 18px; }
+.h5 { font-size: 16px; }
+.h6 { font-size: 14px; }
+
+.redText { color: red; }
+.greenText { color: green; }
+
+
 /* page MultiTransfers */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentMultiTransfersBlock] .contentBlock {
+    max-width: 600px;
+}
 
 .dappBodyBlock .contentBlock {
     display: table;
@@ -318,7 +375,8 @@ h2 {
 .dappBodyBlock .contentBlock .daap-simple-form label {
     display: block;
 }
-.dappBodyBlock .contentBlock .daap-simple-form input {
+.dappBodyBlock .contentBlock .daap-simple-form input,
+.dappBodyBlock .contentBlock .daap-simple-form select {
     width: 98%;
     min-width: 98%;
     max-width: 98%;
@@ -332,13 +390,22 @@ h2 {
 .dappBodyBlock .contentBlock .daap-simple-form input[type=text] {
 
 }
+.dappBodyBlock .contentBlock .daap-simple-form input[type=checkbox] {
+    width: 20px;
+    font-size: 4px;
+    height: 18px;
+    float: left;
+    display: block;
+    min-width: 20px;
+    margin-right: 5px;
+}
 .dappBodyBlock .contentBlock .daap-simple-form textarea {
     width: 98%;
     min-width: 98%;
     max-width: 98%;
     padding-left: 1%;
     padding-right: 1%;
-    min-height: 470px;
+    min-height: 250px;
     border: 1px solid #c1c1c1;
     background-color: #eeeaf4;
     border-radius: 10px;
@@ -395,4 +462,153 @@ h2 {
 .dappBodyBlock .contentBlock .daap-simple-form .ButtonsBlock {
     display: table;
     width: 100%;
+}
+
+
+/* FooterBlock */
+.dappFooterBlock {
+    background: #c6def9;
+    height: 50px;
+    /*position: absolute;*/
+    width: 100%;
+    bottom: 0px;
+}
+
+/* BottomMenu */
+.dappBlock[data-dapp-block=DappBottomMenuBlock] {
+
+}
+.dappBlock[data-dapp-block=DappBottomMenuBlock] .footer-menu {
+    padding: 10px 1%;
+}
+.dappBlock[data-dapp-block=DappBottomMenuBlock] .footer-menu li {
+    padding-bottom: 5px;
+    float: left;
+    margin: 5px 10px;
+}
+.dappBlock[data-dapp-block=DappBottomMenuBlock] .footer-menu li a {
+    text-decoration: none;
+    color: #000;
+}
+.dappBlock[data-dapp-block=DappBottomMenuBlock] .footer-menu li a:hover {
+    text-decoration: underline;
+}
+
+
+/* CreateStaking */
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentStakingTokensBlock] .contentBlock {
+    max-width: 400px;
+}
+
+/* CreateStaking */
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentStakingDetailsBlock] .contentBlock {
+    max-width: 600px;
+}
+
+/* Search Staking */
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentStakingBlock] .contentBlock {
+    max-width: 96%;
+    background: none;
+    display: block;
+}
+.cardsBlock {
+
+}
+
+.cardsBlock .cardBlock {
+    max-width: 330px;
+    width: 98%;
+    height: auto;
+    float: left;
+    background: #ffffff;
+    overflow: hidden;
+    padding: 24px 0px;
+    border-radius: 24px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.cardsBlock .cardBlock .cardBlockTitle1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f55;
+    margin-bottom: 10px;
+}
+.cardsBlock .cardBlock .cardBlockTitle2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.cardsBlock .cardBlock .paramsTable {
+    padding: 0px 5%;
+}
+.cardsBlock .cardBlock p {
+
+}
+.cardsBlock .cardBlock ul {
+
+}
+.cardsBlock .cardBlock ul li {
+
+}
+.cardsBlock .cardBlock .cardBlockButton {
+
+}
+.cardsBlock .cardBlock a {
+    display: block;
+    height: 48px;
+    background: #4c8fdf;
+    margin: 10px 2%;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 48px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* paramsTable */
+.paramsTable {
+
+}
+.paramsTable .paramsTableR {
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #22a9d1;
+}
+.paramsTable .paramsTableC {
+
+}
+.paramsTable .paramsTableC:nth-child(1) {
+    float: left;
+}
+.paramsTable .paramsTableC:nth-child(2) {
+    float: right;
+}
+
+.paramsTable a {
+    color: #0006ff;
+    text-decoration: none;
+}
+.paramsTable a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .paramsTable .paramsTableR {
+        padding-bottom: 0px;
+    }
+    .paramsTable .paramsTableC:nth-child(1) {
+        padding-bottom: 5px;
+    }
+    .paramsTable .paramsTableC:nth-child(2) {
+        float: left;
+        padding-bottom: 5px;
+    }
 }
