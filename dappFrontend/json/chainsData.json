@@ -18,7 +18,7 @@
             },
             "contractMultiStakingPoolsData": {
                 "nameCoin": "MultiStakingPools",
-                "addressCoin": "0x867F98eB04584145336DAa483790E7Fa8CdFB498",
+                "addressCoin": "0xe04b8b7ea44bf14b250c12ec60c33c0b63ae5dde",
                 "decimals": 18,
                 "abiCoin": ""
             },
