@@ -340,6 +340,28 @@ h2 {
 .redText { color: red; }
 .greenText { color: green; }
 
+/* contentBlock app pages */
+
+.contentBlock a {
+    color: #0006ff;
+    text-decoration: none;
+}
+.contentBlock a:hover {
+    text-decoration: underline;
+}
+
+/* page Vestings */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentVestingTokensBlock] .contentBlock {
+    max-width: 600px;
+}
+
+/* page VestingDetails */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentVestingDetailsBlock] .contentBlock {
+    max-width: 600px;
+}
+
 
 /* page MultiTransfers */
 
@@ -444,6 +466,9 @@ h2 {
     color: #fff;
     width: 100%;
     text-align: center;
+}
+.dappBodyBlock .contentBlock .daap-simple-form .formBtn.BtnSmall {
+
 }
 .dappBodyBlock .contentBlock .daap-simple-form .formBtn:hover {
     opacity: 0.9;
@@ -611,4 +636,33 @@ h2 {
         float: left;
         padding-bottom: 5px;
     }
+}
+
+/* data-layout="widget" */
+
+.dappContent[data-layout=widget] {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappPagesBlock],
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappLogoBlock]
+{
+    display: none;
+}
+
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock],
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappSelectNetworkBlock],
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappLanguageBlock]
+{
+    clear: none;
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] [data-event=ConnectWalletButton],
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappSelectNetworkBlock] .MultiMenuButton,
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappLanguageBlock] .MultiMenuButton {
+    font-size: 0px;
+    width: 2px;
+    margin-right: 3px;
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] .daapConnectWalletInfo {
+    width: calc(100% - 100px);
 }
