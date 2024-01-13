@@ -261,6 +261,10 @@ h2 {
     display: table;
 }
 
+.dappBlock[data-dapp-block=DappShowFullBlock] {
+    display: none;
+}
+
 .dappBlock[data-dapp-block=DappSelectNetworkBlock] .currentNetworkBlock {
 
 }
@@ -359,6 +363,18 @@ h2 {
 /* page VestingDetails */
 
 .dappBodyBlock .dappBlock[data-dapp-block=DappContentVestingDetailsBlock] .contentBlock {
+    max-width: 600px;
+}
+
+/* page CreateToken */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentTokenTokensBlock] .contentBlock {
+    max-width: 600px;
+}
+
+/* page TokenDetails */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentTokenDetailsBlock] .contentBlock {
     max-width: 600px;
 }
 
@@ -468,7 +484,13 @@ h2 {
     text-align: center;
 }
 .dappBodyBlock .contentBlock .daap-simple-form .formBtn.BtnSmall {
-
+    background: #b5b1b1;
+    width: auto;
+    font-size: 18px;
+    padding: 0px 10px;
+    line-height: 30px;
+    height: 30px;
+    float: left;
 }
 .dappBodyBlock .contentBlock .daap-simple-form .formBtn:hover {
     opacity: 0.9;
@@ -536,6 +558,17 @@ h2 {
     background: none;
     display: block;
 }
+
+.dAppWidgetHtml {
+    background: #b5b1b1;
+    width: auto;
+    font-size: 18px;
+    padding: 0px 10px;
+    line-height: 30px;
+    height: 30px;
+    float: left;
+}
+
 .cardsBlock {
 
 }
@@ -641,8 +674,9 @@ h2 {
 /* data-layout="widget" */
 
 .dappContent[data-layout=widget] {
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     overflow-x: hidden;
+    background: none;
 }
 .dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappPagesBlock],
 .dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappLogoBlock]
@@ -663,6 +697,49 @@ h2 {
     width: 2px;
     margin-right: 3px;
 }
-.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] .daapConnectWalletInfo {
-    width: calc(100% - 100px);
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappShowFullBlock] img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    margin-top: 5px;
+    float: right;
+    margin-right: 5px;
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] .daapConnectWalletInfo,
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] [data-event=ConnectWalletButton] {
+    width: calc(100% - 145px);
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappWalletBlock] [data-event=ConnectWalletButton] {
+    background: none;
+}
+.dappContent[data-layout=widget] .dappBodyBlock {
+    background: none;
+}
+.dappContent[data-layout=widget] .dappHeadBlock {
+    background: none;
+    padding: 0px;
+}
+.dappContent[data-layout=widget] .dappBodyBlock .contentBlock {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background: none;
+}
+/*.dappContent[data-layout=widget] .StakingInfoBlock .mb2 {
+
+}*/
+.dappContent[data-layout=widget] .StakingInfoBlock .TokenInfoBlock {
+    display: none;
+}
+.dappContent[data-layout=widget] .dappFooterBlock {
+    display: none;
+}
+.dappContent[data-layout=widget] .DisclaimerFull {
+    display: none;
+}
+.dappContent[data-layout=widget] .dappBlock[data-dapp-block=DappShowFullBlock] {
+    display: block;
+}
+.dappContent[data-layout=widget] .dAppWidgetHtml {
+    display: none !important;
 }

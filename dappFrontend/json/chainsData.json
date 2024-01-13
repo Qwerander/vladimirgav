@@ -28,6 +28,12 @@
                 "decimals": 18,
                 "abiCoin": ""
             },
+            "contractMultiTokensData": {
+                "nameCoin": "MultiTokens",
+                "addressCoin": "0xA0e929F2Ddc53534E1b27047a37d6c1aa11476A5",
+                "decimals": 18,
+                "abiCoin": ""
+            },
             "contractSwapRouter": {
                 "nameCoin": "Contract PancakeSwap: Router v2",
                 "addressCoin": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
