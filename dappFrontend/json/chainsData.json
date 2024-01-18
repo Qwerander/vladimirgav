@@ -22,9 +22,9 @@
                 "decimals": 18,
                 "abiCoin": ""
             },
-            "contractMultiVestingPoolsData": {
-                "nameCoin": "MultiVestingPools",
-                "addressCoin": "0x0Bb632CC7CBbe187B19fae75C2d87C2be838E359",
+            "contractMultiLocksData": {
+                "nameCoin": "MultiLocks",
+                "addressCoin": "0xbc26fa3c8834fedc04e9cd560f4a306a0b6c340a",
                 "decimals": 18,
                 "abiCoin": ""
             },

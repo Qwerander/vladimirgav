@@ -341,6 +341,10 @@ h2 {
 .h5 { font-size: 16px; }
 .h6 { font-size: 14px; }
 
+.fl { float: left; }
+.fr { float: right; }
+.fn { float: none; }
+
 .redText { color: red; }
 .greenText { color: green; }
 
@@ -354,15 +358,15 @@ h2 {
     text-decoration: underline;
 }
 
-/* page Vestings */
+/* page Locks */
 
-.dappBodyBlock .dappBlock[data-dapp-block=DappContentVestingTokensBlock] .contentBlock {
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentLockTokensBlock] .contentBlock {
     max-width: 600px;
 }
 
-/* page VestingDetails */
+/* page LockDetails */
 
-.dappBodyBlock .dappBlock[data-dapp-block=DappContentVestingDetailsBlock] .contentBlock {
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentLockDetailsBlock] .contentBlock {
     max-width: 600px;
 }
 
@@ -428,7 +432,8 @@ h2 {
 .dappBodyBlock .contentBlock .daap-simple-form input[type=text] {
 
 }
-.dappBodyBlock .contentBlock .daap-simple-form input[type=checkbox] {
+.dappBodyBlock .contentBlock .daap-simple-form input[type=checkbox],
+.dappBodyBlock .contentBlock .daap-simple-form input[type=radio] {
     width: 20px;
     font-size: 4px;
     height: 18px;
