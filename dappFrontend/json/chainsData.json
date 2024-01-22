@@ -12,13 +12,13 @@
             },
 			"contractTokensMultiTransfersData": {
                 "nameCoin": "TokensMultiTransfers",
-                "addressCoin": "0x0910e72437b6212dda969b6ec82fbcfbb646bf8f",
+                "addressCoin": "0x840387896d1e9eec00b3245567ba7e6fa3966729",
                 "decimals": 18,
-                "abiCoin": "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_addressesArray\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_amountsArray\",\"type\":\"uint256[]\"}],\"name\":\"multiTransfersEth\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_addressesArray\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"multiTransfersEthEqualAmount\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_addressesArray\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_amountsArray\",\"type\":\"uint256[]\"}],\"name\":\"multiTransfersTokens\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_addressesArray\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"multiTransfersTokensEqualAmount\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"transferEth\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"transferTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]"
+                "abiCoin": ""
             },
             "contractMultiStakingPoolsData": {
                 "nameCoin": "MultiStakingPools",
-                "addressCoin": "0xe04b8b7ea44bf14b250c12ec60c33c0b63ae5dde",
+                "addressCoin": "0x89283811bfaea8f127b48dd4828e3d2086ba85b4",
                 "decimals": 18,
                 "abiCoin": ""
             },
@@ -30,7 +30,7 @@
             },
             "contractMultiTokensData": {
                 "nameCoin": "MultiTokens",
-                "addressCoin": "0xA0e929F2Ddc53534E1b27047a37d6c1aa11476A5",
+                "addressCoin": "0x7dea0d737f5bff9c3239942826965de3c8cfeaf3",
                 "decimals": 18,
                 "abiCoin": ""
             },
