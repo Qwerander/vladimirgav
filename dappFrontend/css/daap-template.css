@@ -382,6 +382,12 @@ h2 {
     max-width: 600px;
 }
 
+/* page CreateLiquidity */
+
+.dappBodyBlock .dappBlock[data-dapp-block=DappContentLiquidityTokensBlock] .contentBlock {
+    max-width: 600px;
+}
+
 
 /* page MultiTransfers */
 

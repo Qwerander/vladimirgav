@@ -34,6 +34,30 @@
                 "decimals": 18,
                 "abiCoin": ""
             },
+            "contractSwapToolsData": {
+                "nameCoin": "SwapTools",
+                "addressCoin": "0x1b1d466fbd22c2ecbd03e62c2755bc1a6e08616c",
+                "decimals": 18,
+                "abiCoin": ""
+            },
+            "contractSwapArr": [
+                {
+                    "contractSwapRouter": {
+                        "nameCoin": "PancakeSwap",
+                        "addressCoin": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
+                        "decimals": 18,
+                        "WETH": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+                        "abiCoin": ""
+                    },
+                    "contractSwapFactory": {
+                        "nameCoin": "PancakeSwap",
+                        "addressCoin": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
+                        "decimals": 18,
+                        "WETH": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+                        "abiCoin": ""
+                    }
+                }
+            ],
             "contractSwapRouter": {
                 "nameCoin": "Contract PancakeSwap: Router v2",
                 "addressCoin": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
