@@ -24,7 +24,7 @@
             },
             "contractMultiLocksData": {
                 "nameCoin": "MultiLocks",
-                "addressCoin": "0xbc26fa3c8834fedc04e9cd560f4a306a0b6c340a",
+                "addressCoin": "0x325df63f7c804bba401e6e846a1e0ebea6482b81",
                 "decimals": 18,
                 "abiCoin": ""
             },
@@ -36,7 +36,13 @@
             },
             "contractSwapToolsData": {
                 "nameCoin": "SwapTools",
-                "addressCoin": "0x1b1d466fbd22c2ecbd03e62c2755bc1a6e08616c",
+                "addressCoin": "0x736b557b086843a728343caf1de1968c04297c5f",
+                "decimals": 18,
+                "abiCoin": ""
+            },
+            "contractMultiLaunchpadsData": {
+                "nameCoin": "MultiLaunchpads",
+                "addressCoin": "0xd5c1474acfca1f9fa68e89a46fee66b980b28bf9",
                 "decimals": 18,
                 "abiCoin": ""
             },
