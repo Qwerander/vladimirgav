@@ -30,7 +30,7 @@
             },
             "contractMultiTokensData": {
                 "nameCoin": "MultiTokens",
-                "addressCoin": "0x7dea0d737f5bff9c3239942826965de3c8cfeaf3",
+                "addressCoin": "0x5b3027311c2df952ea72473ec126b72446bd5b79",
                 "decimals": 18,
                 "abiCoin": ""
             },
@@ -42,20 +42,14 @@
             },
             "contractMultiLaunchpadsData": {
                 "nameCoin": "MultiLaunchpads",
-                "addressCoin": "0x739a9da9ad6d648a3439fd7c614141b70a6b55f0",
+                "addressCoin": "0xf9b585f3807f49ece86027be8de02b0fad01d647",
                 "decimals": 18,
                 "abiCoin": ""
             },
             "contractSwapArr": [
                 {
                     "contractSwapRouter": {
-                        "nameCoin": "PancakeSwap",
-                        "addressCoin": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
-                        "decimals": 18,
-                        "WETH": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
-                        "abiCoin": ""
-                    },
-                    "contractSwapFactory": {
+                        "linkSwap": "https://pancakeswap.finance/swap?chain=bscTestnet&outputCurrency=0x...",
                         "nameCoin": "PancakeSwap",
                         "addressCoin": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
                         "decimals": 18,
